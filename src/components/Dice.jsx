@@ -2,14 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 function Dice(props) {
+  
   return (
-      <Box>{props.value}</Box>
+      <Box 
+        style={{backgroundColor: props.isHeld ? "#00ff66" : "white"}}
+        onClick={props.holdDice}
+      >{props.value}
+      </Box>
   )
 }
 
 
 const Box = styled.div`
-  background-color: white;
   height: 5rem;
   width: 5rem;
   border-radius: 0.5rem;
