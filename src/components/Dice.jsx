@@ -24,6 +24,16 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 528px) {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  @media (max-width: 428px) {
+    height: 3rem;
+    width: 3rem;
+  }
+
 `
 
 export default Dice

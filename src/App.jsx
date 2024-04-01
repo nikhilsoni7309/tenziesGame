@@ -93,7 +93,7 @@ function App() {
 
 const Container = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #2b054d;
   display: flex;
   align-items: center;
@@ -109,10 +109,15 @@ const Mainbox = styled.div`
   justify-content: center;
   border-radius: 3rem;
   border: 0.2rem solid white;
+
+  @media (max-width: 640px) {
+    height: 100vh;
+    width: 100vw;
+  }
 `
 const Gamebox = styled.div`
-  height: 35rem;
-  width: 35rem;
+  height: 36rem;
+  width: 36rem;
   background-color: #f5d7dc;
   border-radius: 2rem;
   border: 0.3rem solid white;
@@ -120,6 +125,11 @@ const Gamebox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 640px) {
+    height: 90vh;
+    width: 90vw;
+  }
 `
 
 const Heading = styled.div`
@@ -144,6 +154,7 @@ const Dicebox = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   place-items: center;
+
 `
 
 const ButtonBox = styled.div`
@@ -152,10 +163,10 @@ const ButtonBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-left: 9.3rem;
+
 
   button {
-    background-color: blue;
+    background-color: #2e2eff;
     color: white;
     justify-self: center;
     height: 3rem;
@@ -173,6 +184,12 @@ const ButtonBox = styled.div`
     &:active {
       box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
     }
+  }
+
+  h2 {
+    background-color: #ecf663;
+    padding: 0.7rem;
+    border-radius: 0.6rem;
   }
 
 `
